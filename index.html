@@ -10,6 +10,7 @@
 <style>
 body {font-family: "Lato", sans-serif}
 .mySlides {display: none}
+.content-section {display: none;}
 </style>
 </head>
 <body>
@@ -17,115 +18,58 @@ body {font-family: "Lato", sans-serif}
 <!-- Navbar -->
 <div class="w3-top">
   <div class="w3-bar w3-black w3-card">
-    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
-    <a href="#band" class="w3-bar-item w3-button w3-padding-large w3-hide-small">VIDEO</a>
-    <a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small">WORD</a>
-    <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">EXCEL</a>
-    <div class="w3-dropdown-hover w3-hide-small">
-      <button class="w3-padding-large w3-button" title="More">MORE <i class="fa fa-caret-down"></i></button>     
-      <div class="w3-dropdown-content w3-bar-block w3-card-4">
-        <a href="#" class="w3-bar-item w3-button">INKSCAPE</a>
-        <a href="#" class="w3-bar-item w3-button">GIMP</a>
-      </div>
-    </div>
-    <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="showSection('home')">HOME</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="showSection('video')">VIDEO</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="showSection('word')">WORD</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="showSection('excel')">EXCEL</a>
+    <span class="w3-bar-item w3-padding-large w3-right">PJOTRS DAINEKO</span>
   </div>
 </div>
 
-<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
-<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
-  <a href="#band" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">VIDEO</a>
-  <a href="#tour" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">WORD</a>
-  <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">EXCEL</a>
-  <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">INCSCAPE</a>
-</div>
-
-<!-- Page content -->
-<div class="w3-content" style="max-width:2000px;margin-top:46px">
-
-  <!-- The Band Section -->
-  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+<!-- Main Content -->
+<div id="home" class="w3-content main-content" style="max-width:2000px;margin-top:46px">
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px">
     <h2 class="w3-wide">MANS PORTFOLIO</h2>
     <p class="w3-opacity"><i>no 7. līdz 10. klasei ieskaitot</i></p>
-    <p class="w3-justify">Šajā failā varēsiet redzēt ko esmu iemācījies datorikas klasēs.Mans portfolios atspoguļo iegūtās zināšanas un prasmes, kas attiecas uz datorikas mācību priekšmetu no 7. līdz 10. klasei. Šajā periodā esmu apguvis vairākas svarīgas datorikas jomas, tostarp teksta apstrādi, datu analīzi, grafikas rediģēšanu un video apstrādi. Esmu mācījies izmantot Microsoft Word un Excel, kur guvu praktiskas iemaņas, veidojot dažādus dokumentus, prezentācijas un izstrādājot datu tabulas, grafikus un aprēķinus. Darbojoties ar GIMP, esmu apguvis grafisko dizainu un attēlu apstrādi, kā arī izmantojis dažādus rīkus un funkcijas, lai radītu vizuāli pievilcīgus darbus. Turklāt man bija iespēja iegūt prasmes video montēšanā, izmantojot dažādas video apstrādes programmas, kā arī radīt un rediģēt video saturu. Visi šie rīki un tehnoloģijas ļāvuši man uzlabot gan praktiskās prasmes, gan radošās spējas, sniedzot iespēju realizēt savas idejas un veidot projektus, kas apvieno dažādas datorikas jomas.
- </p>
+    <p class="w3-justify">Šajā failā varēsiet redzēt ko esmu iemācījies datorikas klasēs. Mans portfolios atspoguļo iegūtās zināšanas un prasmes, kas attiecas uz datorikas mācību priekšmetu no 7. līdz 10. klasei. Šajā periodā esmu apguvis vairākas svarīgas datorikas jomas, tostarp teksta apstrādi, datu analīzi, grafikas rediģēšanu un video apstrādi. Esmu mācījies izmantot Microsoft Word un Excel, kur guvu praktiskas iemaņas, veidojot dažādus dokumentus, prezentācijas un izstrādājot datu tabulas, grafikus un aprēķinus. Darbojoties ar GIMP, esmu apguvis grafisko dizainu un attēlu apstrādi, kā arī izmantojis dažādus rīkus un funkcijas, lai radītu vizuāli pievilcīgus darbus. Turklāt man bija iespēja iegūt prasmes video montēšanā, izmantojot dažādas video apstrādes programmas, kā arī radīt un rediģēt video saturu. Visi šie rīki un tehnoloģijas ļāvuši man uzlabot gan praktiskās prasmes, gan radošās spējas, sniedzot iespēju realizēt savas idejas un veidot projektus, kas apvieno dažādas datorikas jomas.</p>
     <div class="w3-row w3-padding-32">
       <div class="w3-center">
         <p>Pjotrs Daineko 10.e</p>
-        <img width="150px" height="150px" src="images/IMG20250221111709.jpg" class="w3-circle w3-margin-bottom" alt="Random Name">
+        <img width="150px" height="150px" src="images/IMG20250221111709.jpg" class="w3-circle w3-margin-bottom" alt="Profile Image"><br>
       </div>
     </div>
   </div>
-  <!-- The Contact Section -->
-  <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
-    <h2 class="w3-wide w3-center">FEEDBACK</h2>
-    <p class="w3-opacity w3-center"><i>Ja jums rodas jautājumi, droši jautājiet!</i></p>
-    <div class="w3-row w3-padding-32">
-      <div class="w3-col m6 w3-large w3-margin-bottom">
-        <i class="fa fa-map-marker" style="width:30px"></i> Riga, LV<br>
-        <i class="fa fa-phone" style="width:30px"></i> Phone: +371 22222222<br>
-        <i class="fa fa-envelope" style="width:30px"> </i> Email: pdaineko@edu.riga.lv<br>
-      </div>
-      <div class="w3-col m6">
-        <form action="/action_page.php" target="_blank">
-          <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
-            <div class="w3-half">
-              <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
-            </div>
-            <div class="w3-half">
-              <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
-            </div>
-          </div>
-          <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
-          <button class="w3-button w3-black w3-section w3-right" type="submit">SEND</button>
-        </form>
-      </div>
-    </div>
-  </div>
-  
-<!-- End Page Content -->
 </div>
 
-<!-- Footer -->
-<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
-  <p class="w3-medium">Powered by <a href="https://github.io" target="_blank">github.io</a></p>
-</footer>
+<!-- Category Sections -->
+<div id="video" class="w3-container w3-content w3-padding-64 content-section">
+  <h2>VIDEO APSTRĀDE</h2>
+ <p>Viens no pedējiem tematiem, ko esam aizskaruši datorikas stundār ir video apstrāde. Tajā mūsu galvenais mērķis bija samontēt videoklipu par 3d kubiņa prinēšanas procesu. Taja ietipst grupas sarunatais par kubiņa izmēriem, logo izvelēšanās un ar 3d printeri printēšanas process. Videoklipa montēšanai izmantoju gad lietotni Kdenlive, gan Davinci Resolve. Pirmā no lietotnēm bija diezgan viegla apgūšanai un ar to jau esmu stradājis iepriekšējos gados. Tomēr tajā nebija vairāku lietu vai funkciju ko gribēju izmantot montēšanai, tāpēc mēģināju montēt ar Davinci Resolve. Šī lietotne bija vairākas reizes grūtāka, tomēr ar to varēju sasniegt arī daudz labāku rezultātu.</p>
+  <iframe width="960" height="540" src="images/kubs.mp4"
+          frameborder="0" allowfullscreen></iframe>
+</div>
+
+<div id="word" class="w3-container w3-content w3-padding-64 content-section">
+  <h2>MICROSOFT WORD</h2>
+  <p><p>Mācību gada sāķuma esmu apguvis Word lietotni. Tā, manuprāt, bija viena no vieglākājām tēmām kas mums bija šajā mācību gadā. Tomēr esmu uzzinājis daudz ko jaunu, piemērām, par vairākiem simboliem, kurus var ievietot teksta failā. </p></p>
+</div>
+
+<div id="excel" class="w3-container w3-content w3-padding-64 content-section">
+  <h2>MICROSOFT EXCEL</h2>
+  <p>Šeit būs informācija par Microsoft Excel lietošanu...</p>
+</div>
 
 <script>
-// Automatic Slideshow - change image every 4 seconds
-var myIndex = 0;
-carousel();
-
-function carousel() {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-  }
-  myIndex++;
-  if (myIndex > x.length) {myIndex = 1}    
-  x[myIndex-1].style.display = "block";  
-  setTimeout(carousel, 4000);    
+function showSection(sectionId) {
+  // Hide all sections
+  document.querySelectorAll('.main-content, .content-section').forEach(section => {
+    section.style.display = 'none';
+  });
+  // Show the selected section
+  document.getElementById(sectionId).style.display = 'block';
 }
-
-// Used to toggle the menu on small screens when clicking on the menu button
-function myFunction() {
-  var x = document.getElementById("navDemo");
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else { 
-    x.className = x.className.replace(" w3-show", "");
-  }
-}
-
-// When the user clicks anywhere outside of the modal, close it
-var modal = document.getElementById('ticketModal');
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
+// Show the home section by default
+showSection('home');
 </script>
 
 </body>
