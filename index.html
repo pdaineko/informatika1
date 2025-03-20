@@ -11,6 +11,9 @@
 body {font-family: "Lato", sans-serif}
 .mySlides {display: none}
 .content-section {display: none;}
+function showAnotherPage() {
+            window.location.href = "otrais.html"; // Replace with your target HTML file
+        }
 </style>
 </head>
 <body>
@@ -23,8 +26,9 @@ body {font-family: "Lato", sans-serif}
     <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="showSection('word')">WORD</a>
     <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="showSection('excel')">EXCEL</a>
     <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="showSection('gimp')">GIMP</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="showSection('incscape')">INCSCAPE</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="showSection('inkscape')">INKSCAPE</a>
     <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="showSection('model')">3D MODELING</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="showAnotherPage()">INDIVIDUAL</a>
     <span class="w3-bar-item w3-padding-large w3-right">PJOTRS DAINEKO</span>
   </div>
 </div>
@@ -65,19 +69,19 @@ body {font-family: "Lato", sans-serif}
 
 <div id="gimp" class="w3-container w3-content w3-padding-64 content-section">
   <h2>GIMP</h2>
-  <p>bla bla bla</p>
-  <img width="960" height="540" src="">
+  <p>GIMP ir lielisks attēlu rediģēšanas rīks, kas piedāvā plašas iespējas bez maksas. Man tas patīk, jo tas ir ļoti funkcionāls un ļauj darīt gandrīz visu to pašu, ko maksas programmas, piemēram, Photoshop.Izmantojot GIMP, esmu iemācījos apstrādāt attēlus, uzlabojot to krāsas un kontrastu, kā arī strādāt ar slāņiem.</p>
+  <img width="960" height="540" src="images/gimp.jpg">
 </div>
 
-<div id="incscape" class="w3-container w3-content w3-padding-64 content-section">
-  <h2>INCSCAPE</h2>
-  <p>Incscape man oti patika ar ar brushes</p>
-  <img width="960" height="540" src="">
+<div id="inkscape" class="w3-container w3-content w3-padding-64 content-section">
+  <h2>INKSCAPE</h2>
+  <p>Incscape man oti patika ar lielu rīku izvēli. zmantojot Inkscape, esmu iemācījies strādāt ar vektoru līknēm un formām, lai radītu precīzus un tīrus dizainus. Izmantot līknes, kas palīdz veidot sarežģītākus un pielāgotus objektus. Arī esmu iemācījies pielāgot un kombinēt formas, izmantojot dažādus savienošanas, apgriešanas un pārklāšanās rīkus.</p>
+  <img width="960" height="540" src="images/inkscape.jpg">
 </div>
 
 <div id="model" class="w3-container w3-content w3-padding-64 content-section">
   <h2>3D MODELING</h2>
-  <p>bla bla bla</p>
+  <p>3d modelēšana man patika. Tai lietojam web lietotni Tinkercad. Man tā patīk, jo programma ir ļoti intuitīva, viegli lietojama un neprasa sarežģītu programmatūras instalēšanu – viss notiek tiešsaistē. Tas ir lielisks rīks iesācējiem, lai apgūtu 3D modelēšanas pamatus.</p>
   <img width="960" height="540" src="images/tinkercad.jpg">
 </div>
 <script>
