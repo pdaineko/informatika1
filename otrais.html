@@ -18,13 +18,13 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
             <div class="w3-bar w3-black w3-card">
                 <a href="#home" class="w3-bar-item w3-button w3-padding-large">OTRAIS</a>
                 <a href="#individual" class="w3-bar-item w3-button w3-padding-large">INDIVIDUAL</a> <!-- Change to use anchor link -->
-                <a href="index.html#home" class="w3-bar-item w3-button w3-padding-large">HOME</a>
-                <a href="index.html#video" class="w3-bar-item w3-button w3-padding-large">VIDEO</a>
-                <a href="index.html#word" class="w3-bar-item w3-button w3-padding-large">WORD</a>
-                <a href="index.html#excel" class="w3-bar-item w3-button w3-padding-large">EXCEL</a>
-                <a href="index.html#gimp" class="w3-bar-item w3-button w3-padding-large">GIMP</a>
-                <a href="index.html#inkscape" class="w3-bar-item w3-button w3-padding-large">INKSCAPE</a>
-                <a href="index.html#model" class="w3-bar-item w3-button w3-padding-large">3D MODELING</a>
+                <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="window.location.href = 'index.html';setPageName('home')">HOME</a>
+                <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="window.location.href = 'index.html';setPageName('video')">VIDEO</a>
+                <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="window.location.href = 'index.html';setPageName('word')">WORD</a>
+                <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="window.location.href = 'index.html';setPageName('excel')"> EXCEL</a>
+                <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="window.location.href = 'index.html';setPageName('gimp')">GIMP</a>
+                <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="window.location.href = 'index.html';setPageName('inkscape')">INKSCAPE</a>
+                <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="window.location.href = 'index.html';setPageName('model')">3D MODELING</a>
             </div>
         </div>
   <div id="home" class="w3-container w3-content w3-padding-64 content-section">
@@ -54,7 +54,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
   // Show the selected section
        document.getElementById(sectionId).style.display = 'block';
      }
-     showSection('home');
      function showAnotherPage() {
             window.location.href = "index.html";
         }
@@ -65,6 +64,17 @@ function showSection1(sectionId) {
        });
   // Show the selected section
        document.getElementById(sectionId).style.display = 'block';
+     }
+     function showSection(sectionId) {
+  // Hide all sections
+  document.querySelectorAll('.main-content, .content-section').forEach(section => {
+    section.style.display = 'none';
+  });
+  // Show the selected section
+  document.getElementById(sectionId).style.display = 'block';
+}
+     function setPageName (arg) {
+        sessionStorage.setItem("sectionid", arg) ;
      }
      </script>
 </html>

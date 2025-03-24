@@ -78,6 +78,8 @@
   <img width="960" height="540" src="images/tinkercad.jpg">
 </div>
 <script>
+const sectionids = ["home", "video", "word", "excel", "gimp", "inkscape", "model"];
+
 function showSection(sectionId) {
   // Hide all sections
   document.querySelectorAll('.main-content, .content-section').forEach(section => {
@@ -86,11 +88,22 @@ function showSection(sectionId) {
   // Show the selected section
   document.getElementById(sectionId).style.display = 'block';
 }
-// Show the home section by default
-showSection('home');
 function showAnotherPage() {
             window.location.href = "otrais.html";
         }
+
+    // Show the home section by default
+window.onload = function() {
+    if (sectionids.includes(sessionStorage.getItem("sectionid"))){
+    //window.alert("nashli"+sessionStorage.getItem("sectionid"));
+    showSection(sessionStorage.getItem("sectionid"));
+}
+else {
+    //window.alert("esle");
+    showSection('home');
+}
+}
+
 </script>
 
 </body>
